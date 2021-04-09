@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body style="font-family: Calibri;">
+    <h2>Список изображений</h2>
+
+    {% for item in images %}
+        <a href="image/{{ item.uuid }}">{{ item.image }}</a><br/>
+    {% empty %}
+        <p>Нет доступных изображений</p>
+    {% endfor %}
+
+    <p><a href="upload/">Добавить изображение</a></p>
+</body>
+</html>
